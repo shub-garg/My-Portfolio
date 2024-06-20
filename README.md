@@ -54,3 +54,8 @@ http://localhost:8000
 1. Viewing Projects: Navigate through the portfolio to see detailed descriptions and links to my projects.
 2. Contact Form: Use the contact form to send me a message directly from the website.
 3. Skills and About Me: Learn more about my professional skills and background.
+
+4. ## Future Enhancements
+- Blog Section: Adding a blog to share insights, tutorials, and updates.
+- Animations: Enhancing the visual appeal with CSS and JavaScript animations.
+- Dark Mode: Implementing a dark mode toggle for better user experience.
