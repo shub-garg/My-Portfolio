@@ -1,0 +1,453 @@
+{% extends "basic.html" %}
+{% load static %}
+
+{% block title %} About me {% endblock title %}
+
+{% block body %}
+
+{% for message in messages %}
+<div class="alert alert-{{message.tags}} alert-dismissible fade show" role="alert">
+    <strong>{{message}}</strong>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+{% endfor %}
+<!-- ======= About Section ======= -->
+<section id="about" class="about">
+    <div class="container">
+      <div class="section-title">
+        <h2>About</h2>
+        <p>Proficient and dedicated Computer Science graduate with a strong academic and research background in computer vision and machine learning. Proficient in developing software applications using Python, DotNet, and JavaScipt. Committed to leveraging technology to solve complex problems and drive innovation.</p>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-4" data-aos="fade-right">
+          <img src="{% static 'assets/img/profile-img.jpeg' %}" class="img-fluid" alt="">
+        </div>
+        <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
+          <h3>Computer Science Graduate, Data Scientist &amp; Researcher.</h3>
+          <p class="fst-italic">
+            Experienced in computer vision, machine learning, and software development.
+          </p>
+          <div class="row">
+            <div class="col-lg-6">
+              <ul>
+                <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>17 Dec 2000</span></li>
+                <li><i class="bi bi-chevron-right"></i> <strong>Website:</strong> <span><a href="https://www.shubhamgarg.live">www.shubhamgarg.live</a></span></li>
+                <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+1 917 914 1683</span></li>
+                <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Brooklyn, New York, USA</span></li>
+              </ul>
+            </div>
+            <div class="col-lg-6">
+              <ul>
+                <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>23</span></li>
+                <li><i class="bi bi-chevron-right"></i> <strong>University:</strong> <span>New York University</span></li>
+                <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>M.S. Computer Science</span></li>
+                <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>sg8311@nyu.edu</span></li>
+              </ul>
+            </div>
+          </div>
+          <p>
+            Proficient in using advanced algorithms and tools to develop innovative solutions in various domains including computer vision, artificial intelligence, and data science.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section><!-- End About Section -->
+
+  <!-- ======= Facts Section ======= -->
+<section id="facts" class="facts">
+<div class="container">
+  <div class="section-title">
+    <h2>Facts</h2>
+    <p>Here are some impressive facts and statistics that highlight my professional journey and accomplishments.</p>
+  </div>
+
+  <div class="row no-gutters">
+    <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up">
+      <div class="count-box">
+        <i class="bi bi-journal-richtext"></i>
+        <span data-purecounter-start="0" data-purecounter-end="6" data-purecounter-duration="1" class="purecounter"></span>
+        <p><strong>Publications</strong> in international journals and conferences.</p>
+      </div>
+    </div>
+
+    <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up" data-aos-delay="100">
+      <div class="count-box">
+        <i class="bi bi-award"></i>
+        <span data-purecounter-start="0" data-purecounter-end="3" data-purecounter-duration="1" class="purecounter"></span>
+        <p><strong>Certifications</strong> including AWS Certified Cloud Practitioner and Microsoft Certified: Azure AI Fundamentals.</p>
+      </div>
+    </div>
+
+    <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up" data-aos-delay="200">
+      <div class="count-box">
+        <i class="bi bi-briefcase"></i>
+        <span data-purecounter-start="0" data-purecounter-end="20" data-purecounter-duration="1" class="purecounter"></span>
+        <p><strong>Projects</strong> completed in various domains including comouter vision, machine learning, and web development.</p>
+      </div>
+    </div>
+
+    <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up" data-aos-delay="400">
+      <div class="count-box">
+        <i class="bi bi-code-slash"></i>
+        <span data-purecounter-start="0" data-purecounter-end="7" data-purecounter-duration="1" class="purecounter"></span>
+        <p><strong>Languages Proficient In</strong> including Python, Java, and C++.</p>
+      </div>
+    </div>
+  </div>
+</div>
+</section><!-- End Facts Section -->
+
+  <!-- ======= Projects Section ======= -->
+  <section id="portfolio" class="portfolio section-bg">
+    <div class="container">
+    
+      <div class="section-title">
+        <h2>Projects</h2>
+        <p>Here are some of the projects I have worked on. Click on the links to view the project details on GitHub.</p>
+      </div>
+    
+      <div class="row" data-aos="fade-up">
+        <div class="col-lg-12 d-flex justify-content-center">
+          <ul id="portfolio-flters">
+            <li data-filter="*" class="filter-active">All</li>
+            <li data-filter=".filter-app">AI/ML</li>
+            <li data-filter=".filter-card">Full Stack</li>
+            <li data-filter=".filter-web">Web Dev</li>
+          </ul>
+        </div>
+      </div>
+    
+      <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
+    
+        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+          <div class="portfolio-wrap">
+            <h5>Project 1: Hybrid Lung Segmentation Disease Classification and Severity Localization</h5>
+            <img src="{% static 'assets/img/portfolio/portfolio-1.png' %}" class="img-fluid" alt="" style="width: 100%; height: auto;">
+            <div class="portfolio-links">
+              <a href="{% static 'assets/img/portfolio/portfolio-1.png' %}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Hybrid Lung Segmentation Disease Classification and Severity Localization"><i class="bx bx-plus"></i></a>
+              <a href="https://github.com/shub-garg/Hybrid-Lung-Segmentation-Disease-Classification-and-Severity-Localization" target="_blank" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+        </div>
+    
+        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+          <div class="portfolio-wrap">
+            <h5>Project 2: 3D reconstruction NerfStudio</h5>
+            <img src="{% static 'assets/img/portfolio/portfolio2.gif' %}" class="img-fluid" alt="" style="width: 100%; height: auto;">
+            <div class="portfolio-links">
+              <a href="{% static 'assets/img/portfolio/portfolio2.gif' %}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="3D reconstruction NerfStudio"><i class="bx bx-plus"></i></a>
+              <a href="https://github.com/shub-garg/NERF-pytorch-Implementation" target="_blank" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+        </div>
+    
+        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+          <div class="portfolio-wrap">
+            <h5>Project 3: Global Temperature Prediction and Analysis using ARIMA SARIMAX</h5>
+            <img src="{% static 'assets/img/portfolio/portfolio_3.gif' %}" class="img-fluid" alt="" style="width: 100%; height: auto;">
+            <div class="portfolio-links">
+              <a href="{% static 'assets/img/portfolio/portfolio_3.gif' %}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Global Temperature Prediction and Analysis"><i class="bx bx-plus"></i></a>
+              <a href="https://github.com/shub-garg/Global-Temperature-Prediction-and-Analysis-using-ARIMA-SARIMAX-and-Neural-Network" target="_blank" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+        </div>
+    
+        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+          <div class="portfolio-wrap">
+            <h5>Project 6: Aerial Image Segmentation: A modified DeepLabV3+ approach</h5>
+            <img src="{% static 'assets/img/portfolio/portfolio6.jpg' %}" class="img-fluid" alt="" style="width: 100%; height: auto;">
+            <div class="portfolio-links">
+              <a href="{% static 'assets/img/portfolio/portfolio6.jpg' %}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Aerial Image Segmentation: A modified DeepLabV3+ approach"><i class="bx bx-plus"></i></a>
+              <a href="https://github.com/shub-garg/Lung-Disease-Classification" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+        </div>
+    
+        <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+          <div class="portfolio-wrap">
+            <h5>Project 5: My Portfolio: Django and AWS</h5>
+            <img src="{% static 'assets/img/portfolio/portfolio-5.gif' %}" class="img-fluid" alt="" style="width: 100%; height: auto;">
+            <div class="portfolio-links">
+              <a href="{% static 'assets/img/portfolio/portfolio-5.gif' %}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="My Portfolio: Django and AWS"><i class="bx bx-plus"></i></a>
+              <a href="https://github.com/shub-garg/My-Portfolio" target="_blank" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+        </div>
+    
+        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+          <div class="portfolio-wrap">
+            <h5>Project 4: Yoga Pose Skeletonization and Classification</h5>
+            <img src="{% static 'assets/img/portfolio/portfolio-4.gif' %}" class="img-fluid" alt="" style="width: 100%; height: auto;">
+            <div class="portfolio-links">
+              <a href="{% static 'assets/img/portfolio/portfolio-4.gif' %}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Yoga Pose Skeletonization and Classification"><i class="bx bx-plus"></i></a>
+              <a href="https://github.com/shub-garg/Yoga-Pose-Classification-and-Skeletonization" target="_blank" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+        </div>
+    
+        <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+          <div class="portfolio-wrap">
+            <h5>Project 7: End to End Chat Application and Encryption using node.js, socket.io and express </h5>
+            <img src="{% static 'assets/img/portfolio/portfolio-7.gif' %}" class="img-fluid" alt="" style="width: 100%; height: auto;">
+            <div class="portfolio-links">
+              <a href="{% static 'assets/img/portfolio/portfolio-7.gif' %}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="End to End Chat Application and message encryption using node.js"><i class="bx bx-plus"></i></a>
+              <a href="https://github.com/shub-garg/E2E-Chat-Application-with-Encryption" target="_blank" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-web col-lg-4 col-md-6 portfolio-item filter-app">
+          <div class="portfolio-wrap">
+            <h5>Project 8: LUNA Chat App: A Multimodal Approach to Analyzing Depression through Audio, Video and Text</h5>
+            <img src="{% static 'assets/img/portfolio/portfolio-8.gif' %}" class="img-fluid" alt="" style="width: 100%; height: auto;">
+            <div class="portfolio-links">
+              <a href="{% static 'assets/img/portfolio/portfolio-8.gif' %}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="LUNA Chat App: A Multimodal Approach to Analyzing Depression through Audio, Video and Text"><i class="bx bx-plus"></i></a>
+              <a href="https://github.com/shub-garg/EmotionRec-main" target="_blank" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+        </div>
+    
+      </div>
+    </div>
+    </section><!-- End Projects Section -->
+
+<!-- ======= Skills Section ======= -->
+<section id="skills" class="skills section-bg">
+<div class="container">
+
+  <div class="section-title">
+    <h2>Skills</h2>
+  </div>
+
+  <div class="row skills-content justify-content-center">
+
+    <div class="col-lg-3 col-md-6" data-aos="fade-up">
+      <h4><i class="bi bi-code-slash"></i> Programming</h4>
+      <ul>
+        <li>Python</li>
+        <li>Java</li>
+        <li>R programming</li>
+        <li>DotNet ( C# )</li>
+        <li>SQL Database</li>
+        <li>C++/C</li>
+        <li>HTML/CSS</li>
+        <li>JavaScript</li>
+        <li>React/React Native</li>
+        <li>Shell Script</li>
+      </ul>
+    </div>
+
+    <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+      <h4><i class="bi bi-layers"></i> Frameworks</h4>
+      <ul>
+        <li>PyTorch</li>
+        <li>TensorFlow/TensorFlow Lite</li>
+        <li>Keras</li>
+        <li>Pandas</li>
+        <li>Numpy</li>
+        <li>Django</li>
+        <li>Flask</li>
+        <li>FastAPI</li>
+        <li>Bootstrap</li>
+        <li>Transfer Learning</li>
+        <li>Databricks</li>
+        <li>Hadoop</li>
+        
+      </ul>
+    </div>
+
+    <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+      <h4><i class="bi bi-gear"></i> Technologies</h4>
+      <ul>
+        <li>Computer Vision</li>
+        <li>Artificial Intelligence</li>
+        <li>Data Science</li>
+        <li>Machine Learning</li>
+        <li>Kubernetes</li>
+        <li>Docker</li>
+        <li>REST API</li>
+        <li>MongoDB</li>
+        <li>CosmoDB</li>
+        <li>Software Development</li>
+        <li>Linux</li>
+      </ul>
+    </div>
+
+    <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+      <h4><i class="bi bi-tools"></i> Tools</h4>
+      <ul>
+        <li>GitHub</li>
+        <li>Amazon Web Services</li>
+        <li>Microsoft Azure</li>
+        <li>GCP</li>
+        <li>Version Control</li>
+        <li>Anaconda</li>
+        <li>Apache Spark</li>
+        <li>Kafka</li>
+        <li>PowerBI</li>
+      </ul>
+    </div>
+
+    {% comment %} <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
+      <h4><i class="bi bi-people"></i> Soft Skills</h4>
+      <ul>
+        <li>Communication</li>
+        <li>Leadership</li>
+        <li>Community Building</li>
+        <li>Teamwork</li>
+        <li>Decision-making</li>
+        <li>Adaptability</li>
+        <li>Problem Solving</li>
+      </ul>
+    </div> {% endcomment %}
+  </div>
+
+  <br>
+  <br>
+
+      <div class="row skills-content">
+
+        <div class="col-lg-6" data-aos="fade-up">
+          <div class="progress">
+            <span class="skill">Python <i class="val">100%</i></span>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div>
+
+          <div class="progress">
+            <span class="skill">JavaScript <i class="val">95%</i></span>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div>
+
+          <div class="progress">
+            <span class="skill">R Programming <i class="val">80%</i></span>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="progress">
+            <span class="skill">DotNet (C#) <i class="val">90%</i></span>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div>
+
+          <div class="progress">
+            <span class="skill">SQL Database <i class="val">90%</i></span>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div>
+
+          <div class="progress">
+            <span class="skill">Java <i class="val">75%</i></span>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section><!-- End Skills Section -->
+
+<!-- ======= Testimonials Section ======= -->
+<section id="testimonials" class="testimonials section-bg">
+  <div class="container">
+    <div class="section-title">
+      <h2>Recommendations</h2>
+      <p>Here are some words from colleagues and mentors who have worked with me.</p>
+    </div>
+
+    <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+      <div class="swiper-wrapper">
+
+        <div class="swiper-slide">
+          <div class="testimonial-item" data-aos="fade-up">
+            <p>
+              <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+              Shubham is a dedicated, hardworking, and high-performance individual. 
+              In my work tenure with him, he always took feedback positively and continuously improved, and worked beyond expectation.
+              I am giving shubham my highest recommendation and wish him all the best for all his future endeavors. I am sure that shubham will bring out a positive outcome wherever he works for moving forward.
+            <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+            </p>
+            <img src="{% static 'assets/img/testimonials/testimonials-1.jpeg' %}" class="testimonial-img" alt="">
+            <h3>Anurag Gupta</h3>
+            <h4>Associate Solution Advisor at Deloitte</h4>
+          </div>
+        </div><!-- End testimonial item -->
+
+        <div class="swiper-slide">
+          <div class="testimonial-item" data-aos="fade-up" data-aos-delay="100">
+            <p>
+              <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+              Shubham is a very bright candidate with excellent technical skills and has good knowledge of deployment and application of machine learning workflow on Azure cloud. Shubham worked on creating a python based tool for automated WhatsApp messaging and has contributed to a variety of activities like analysis, management, and pre-processing of data and mass mail utility. It was a pleasure working with him.
+              <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+            </p>
+            <img src="{% static 'assets/img/testimonials/testimonials-2.jpeg' %}" class="testimonial-img" alt="">
+            <h3>Dr. Snehkumar Shahani</h3>
+            <h4>Lead Data Scientist (Sr Engineering Lead) at Persistent Systems</h4>
+          </div>
+        </div><!-- End testimonial item -->
+
+        <div class="swiper-slide">
+          <div class="testimonial-item" data-aos="fade-up" data-aos-delay="200">
+            <p>
+              <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+              Shubham has been a part of my team since July 2022 and has been performing exceptionally well. As Shubham's supervisor,
+              I can attest to his hard work, dedication, and professionalism. He is an asset to my organization and has proven to be an
+              invaluable member of my team. Shubham’s commitment to his work and attention to detail have consistently exceeded my
+              expectations.
+              <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+            </p>
+            <img src="{% static 'assets/img/testimonials/testimonials-3.jpg' %}" class="testimonial-img" alt="">
+            <h3>Dr Katerina Bourazeri</h3>
+            <h4>Lecturer at the University of Essex</h4>
+          </div>
+        </div><!-- End testimonial item -->
+
+        <div class="swiper-slide">
+          <div class="testimonial-item" data-aos="fade-up" data-aos-delay="300">
+            <p>
+              <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+            I am pleased to recommend Shubham Garg, an outstanding student known for his hard work, perseverance, and exceptional technical skills. His strong academic performance and active class participation highlight his problem-solving abilities and conceptual understanding. Shubham's leadership and organizational skills, demonstrated through his involvement in various university events and clubs, further underscore his capability to excel in any endeavor he pursues.
+              <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+            </p>
+            <img src="{% static 'assets/img/testimonials/testimonials-4.jpg' %}" class="testimonial-img" alt="">
+            <h3>Dr. Sumita Gupta</h3>
+            <h4>Assitant Professor at Amity University</h4>
+          </div>
+        </div><!-- End testimonial item -->
+
+       <div class="swiper-slide">
+          <div class="testimonial-item" data-aos="fade-up" data-aos-delay="400">
+            <p>
+              <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+              Shubham Garg is a dedicated student with a strong foundation in AI, Machine Learning, and Computer Vision. His analytical skills and passion for learning are evident in his research on 'Yoga Pose Classification' and 'Aerial Image Segmentation.' Shubham excels in implementing and improving complex AI models and is a commendable mentor to his peers. His research contributions make him highly recommendable for advanced academic endeavors in AI and ML.
+              <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+            </p>
+            <img src="{% static 'assets/img/testimonials/testimonials-5.jpg' %}" class="testimonial-img" alt="">
+              <h3>Dr. Richa Gupta</h3>
+            <h4>Assitant Professor at Amity University</h4>
+          </div>
+        </div><!-- End testimonial item --> 
+
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+</section><!-- End Testimonials Section -->
+
+<style>
+  .portfolio-item {
+    margin-bottom: 5px; /* Adjust the value as needed */
+  }
+</style>
+
+{% endblock body %}
