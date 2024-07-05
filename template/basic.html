@@ -20,6 +20,8 @@
   <link href="{% static 'assets/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
   <link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
   <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 
   <!-- Template Main CSS File -->
   <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
@@ -41,7 +43,7 @@
         <img src="{% static 'assets/img/profile-img.jpeg' %}" alt="" class="img-fluid rounded-circle">
         <h1 class="text-light"><a href="home.html">Shubham Garg</a></h1>
         <div class="social-links mt-3 text-center">
-          {% comment %} <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a> {% endcomment %}
+          <a href="https://github.com/shub-garg" class="github" target="_blank"><i class="bx bxl-github"></i></a>
           <a href="mailto:sg8311@nyu.edu" class="email" target="_blank"><i class="bx bx-envelope"></i></a>
           {% comment %} <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a> {% endcomment %}
           <a href="https://scholar.google.com/citations?user=OXLGdfEAAAAJ&hl=en&authuser=1" class="google-scholar" target="_blank"><i class="bx bxl-google"></i></a>
@@ -91,6 +93,56 @@
 
 
   <main id="main">
+
+    <div class="bell-container"> <a href = "https://www.card.shubhamgarg.live" target = "_blank">
+      <i class="fa-solid fa-atom notification-icon"></i>
+      <div class="message">Check out my Portfolio card!</div>
+    </a>
+    </div>
+
+    <style>
+      .bell-container i{
+        cursor: pointer;
+        position: fixed;
+        right: 100px;
+        top: 15px;
+        font-size: 24px;
+        outline: none !important;
+        background-color: #149ddd;
+        color: #fff;
+        width: 40px;
+        height: 40px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50px;
+        z-index: 1000;
+      }
+
+      .message {
+        display: none;
+        position: fixed;
+        right: 20px;
+        top: 60px;
+        background-color: #333;
+        color: #fff;
+        padding: 10px;
+        border-radius: 5px;
+        white-space: nowrap;
+        font-size: smaller;
+        z-index: 1000;
+    }
+    .bell-container i:hover {
+      background-color: black;
+      transform: scale(1.2);
+
+    }
+
+    .bell-container:hover .message {
+      display: block;
+  }
+    </style>
+
 {% block body %}
 
 {% endblock body %}
